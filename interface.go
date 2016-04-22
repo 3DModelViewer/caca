@@ -1,10 +1,10 @@
-package cc
+package caca
 
 import (
 	. "github.com/robsix/json"
 )
 
-type CCClient interface {
+type CacaClient interface {
 	RegisterSheet(b64UrnAndManifestPath string) (*Json, error)
 	GetSheetRegistration(registrationId string) (*Json, error)
 	RegisterClashTest(leftRegId string, rightRegId string) (*Json, error)

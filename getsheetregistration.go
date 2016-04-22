@@ -1,4 +1,4 @@
-package cc
+package caca
 
 import (
 	sj "github.com/robsix/json"

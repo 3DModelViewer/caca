@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/modelhub/cc"
+	"github.com/modelhub/caca"
 	"github.com/robsix/golog"
 	"fmt"
 )
@@ -12,7 +12,7 @@ const (
 
 func main() {
 	log := golog.NewConsoleLog(0)
-	ccClient := cc.NewCCClient(ccHost, log)
+	ccClient := caca.NewCacaClient(ccHost, log)
 
 	/*
 	structural := "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bW9kZWxodWJfMDE5MWE5MTc0OTM4NDY0ZjI1OGRmZjUzODE5YjQyNWE4Ny84MjUyNTUyZWRlNmQ0MGJhYTE4ZDcwMmE0Y2FmYjIyMC5ud2Q=/output/0/0.svf"
