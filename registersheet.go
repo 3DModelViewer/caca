@@ -16,7 +16,7 @@ func regsiterSheet(host string, base64UrnAndMaifestPath string) (ret *sj.Json, e
 		return nil, err
 	}
 
-	req, err := newRequest("Put", host+"/api/v1/models", reader, "application/json")
+	req, err := newRequest("POST", host+"/api/v1/models", reader, "application/json")
 	if err != nil {
 		return nil, err
 	}
