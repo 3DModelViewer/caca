@@ -61,6 +61,16 @@ func (c *ccClient) GetClashTest(clashTestId string) (*Json, error) {
 	return res, err
 }
 
+func (c *ccClient) RerunClashTest(clashTestId string) (*Json, error) {
+	res, err := rerunClashTest(c.host, clashTestId)
+	if err != nil {
+		c.log.Error("CC.RerunClashTest Error: %v", err)
+	} else {
+		c.log.Info("CC.RerunClashTest Success")
+	}
+	return res, err
+}
+
 
 /**
  * helpers
