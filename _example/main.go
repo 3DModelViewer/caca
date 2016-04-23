@@ -22,19 +22,13 @@ func main() {
 	if err != nil {
 		log.Critical("%v", err)
 	}
-	if data != nil {
-		str, _ := data.ToString()
-		log.Info("%v", str)
-	}
+	log.Info("%v", data)
 
 	data, err =ccClient.RegisterSheet(hvac)
 	if err != nil {
 		log.Critical("%v", err)
 	}
-	if data != nil {
-		str, _ := data.ToString()
-		log.Info("%v", str)
-	}
+	log.Info("%v", data)
 	*/
 
 	/*
@@ -46,11 +40,9 @@ func main() {
 	if err != nil {
 		log.Critical("%v", err)
 	}
-	if data != nil {
-		str, _ := data.ToString()
-		log.Info("%v", str)
-	}
+	log.Info("%v", data)
 	*/
+
 
 	clashTestId := "65adf44b-f725-45f1-95e8-98885782a86b"
 	data, err := ccClient.GetClashTest(clashTestId)
@@ -62,6 +54,23 @@ func main() {
 		str, _ := data.ToString()
 		log.Info("%v", str)
 	}
+	/*
+	data
+		id
+		left
+			id
+			transform
+			urn
+		right
+			id
+			transform
+			urn
+		result: [{
+			distance: num,
+			left: objectId,
+			right: objectId
+		},...]
+	 */
 
 	fmt.Scanln()
 }

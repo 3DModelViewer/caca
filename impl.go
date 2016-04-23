@@ -21,7 +21,7 @@ type cacaClient struct {
 	log                golog.Log
 }
 
-func (c *cacaClient) RegisterSheet(base6fUrnAndManifestPath string) (*Json, error) {
+func (c *cacaClient) RegisterSheet(base6fUrnAndManifestPath string) (string, error) {
 	res, err := regsiterSheet(c.host, base6fUrnAndManifestPath)
 	if err != nil {
 		c.log.Error("Caca.RegisterSheet Error: %v", err)
@@ -41,7 +41,7 @@ func (c *cacaClient) GetSheetRegistration(regId string) (*Json, error) {
 	return res, err
 }
 
-func (c *cacaClient) RegisterClashTest(leftRegId string, rightRegId string) (*Json, error) {
+func (c *cacaClient) RegisterClashTest(leftRegId string, rightRegId string) (string, error) {
 	res, err := registerClashTest(c.host, leftRegId, rightRegId)
 	if err != nil {
 		c.log.Error("Caca.RegisterClashTest Error: %v", err)
